@@ -41,14 +41,19 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 
 #region Selection Sort
 
-int[] unSortedArray = [3,2,1,5,4,1];
-SelectionSort selectionSort = new SelectionSort();
-int[] sortedArray=selectionSort.SortArray_Selection(unSortedArray);
-Console.WriteLine($"[{string.Join(",",sortedArray)}]");
+//int[] unSortedArray = [3,2,1,5,4,1];
+//SelectionSort selectionSort = new SelectionSort();
+//int[] sortedArray=selectionSort.SortArray_Selection(unSortedArray);
+//Console.WriteLine($"[{string.Join(",",sortedArray)}]");
 
 #endregion
 
-#region MyRegion
+#region Insertion sort
+
+int[] unSortedArray = [3, 2, 1, 5, 4, 1];
+InsertionSort selectionSort = new InsertionSort();
+int[] sortedArray = selectionSort.SortArray_Insertion(unSortedArray);
+Console.WriteLine($"[{string.Join(",", sortedArray)}]");
 
 #endregion
 
