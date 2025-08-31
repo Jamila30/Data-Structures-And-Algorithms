@@ -51,8 +51,8 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 #region Insertion sort
 
 //int[] unSortedArray = [3, 2, 1, 5, 4, 1];
-//InsertionSort selectionSort = new InsertionSort();
-//int[] sortedArray = selectionSort.SortArray_Insertion(unSortedArray);
+//InsertionSort insertionSort = new InsertionSort();
+//int[] sortedArray = insertionSort.SortArray_Insertion(unSortedArray);
 //Console.WriteLine($"[{string.Join(",", sortedArray)}]");
 
 #endregion
@@ -60,8 +60,18 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 #region Bubble sort
 
 //int[] unSortedArray = [3, 2, 1, 5, 4, 1,9,0];
-//BubbleSort selectionSort = new BubbleSort();
-//int[] sortedArray = selectionSort.SortArray_Bubble(unSortedArray);
+//BubbleSort bubbleSort = new BubbleSort();
+//int[] sortedArray = bubbleSort.SortArray_Bubble(unSortedArray);
+//Console.WriteLine($"[{string.Join(",", sortedArray)}]");
+
+#endregion
+
+#region Shell sort
+
+//int[] unSortedArray = { 100, 99, 98, 1, 2, 3, 4, 5, 6 };
+
+//ShellSort shellSort = new ShellSort();
+//int[] sortedArray = shellSort.SortArray_Shell(unSortedArray);
 //Console.WriteLine($"[{string.Join(",", sortedArray)}]");
 
 #endregion
