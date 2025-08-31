@@ -50,10 +50,19 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 
 #region Insertion sort
 
-int[] unSortedArray = [3, 2, 1, 5, 4, 1];
-InsertionSort selectionSort = new InsertionSort();
-int[] sortedArray = selectionSort.SortArray_Insertion(unSortedArray);
-Console.WriteLine($"[{string.Join(",", sortedArray)}]");
+//int[] unSortedArray = [3, 2, 1, 5, 4, 1];
+//InsertionSort selectionSort = new InsertionSort();
+//int[] sortedArray = selectionSort.SortArray_Insertion(unSortedArray);
+//Console.WriteLine($"[{string.Join(",", sortedArray)}]");
+
+#endregion
+
+#region Bubble sort
+
+//int[] unSortedArray = [3, 2, 1, 5, 4, 1,9,0];
+//BubbleSort selectionSort = new BubbleSort();
+//int[] sortedArray = selectionSort.SortArray_Bubble(unSortedArray);
+//Console.WriteLine($"[{string.Join(",", sortedArray)}]");
 
 #endregion
 
