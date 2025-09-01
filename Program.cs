@@ -76,5 +76,16 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 
 #endregion
 
+#region Merge sort
+
+int[] unsortedArray = { 100, 99, 98, 1, 2, 3, 4, 5, 6 };
+
+MergeSort mergeSort = new MergeSort();
+int[] sortedArray=mergeSort.SortArray_Merge(unsortedArray, 0, 8, 1);
+Console.WriteLine($"[{string.Join(",", sortedArray)}]");
+
+
+#endregion
+
 
 #endregion
