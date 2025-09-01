@@ -63,22 +63,22 @@ namespace DataStructuresAndAlgorithms.SortingAlgorithms
 
 
         // [5,8,2,1,0,9]   l=0 r=5  m=2
-        public int[] SortArray_Merge(int[] unsortedArray, int left, int right)
-        {
-            if (left < right)
-            {
-                // subsequence de gelende yeni array length ferqli olacaq
-                int mid = left + (right - left) / 2;  //2
-                SortArray_Merge(unsortedArray, left, mid);  // (arr,0,2)-[5,8,2]-(arr,0,1)
-                SortArray_Merge(unsortedArray, mid + 1, right); // (arr,3,4)-[1,0,9]-(arr,2,2)
+        //public int[] SortArray_Merge(int[] unsortedArray, int left, int right)
+        //{
+        //    if (left < right)
+        //    {
+        //        // subsequence de gelende yeni array length ferqli olacaq
+        //        int mid = left + (right - left) / 2;  //2
+        //        SortArray_Merge(unsortedArray, left, mid);  // (arr,0,2)-[5,8,2]-(arr,0,1)
+        //        SortArray_Merge(unsortedArray, mid + 1, right); // (arr,3,4)-[1,0,9]-(arr,2,2)
 
-                MergeArray_Merge(unsortedArray, left, mid, right);
-            }
-        }
+        //        MergeArray_Merge(unsortedArray, left, mid, right);
+        //    }
+        //}
 
-        public int[] MergeArray_Merge(int[] arr,int left, int middle, int right)
-        {
-        }
+        //public int[] MergeArray_Merge(int[] arr,int left, int middle, int right)
+        //{
+        //}
 
     }
 }
