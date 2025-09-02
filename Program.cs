@@ -81,11 +81,22 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 //int[] unsortedArray = { 100, 99, 98, 1, 2, 3, 4, 5, 6 };
 
 //MergeSort mergeSort = new MergeSort();
-//int[] sortedArray=mergeSort.SortArray_Merge(unsortedArray, 0, 8, 1);
+//int[] sortedArray = mergeSort.SortArray_Merge(unsortedArray, 0, 8);
 //Console.WriteLine($"[{string.Join(",", sortedArray)}]");
-Console.WriteLine(  "test");
+
 
 #endregion
 
+#region Quick sort
+
+int[] unsortedArray = { 3,100, 99, 2,98, 4, 101, 1 };
+
+QuickSort quickSort = new QuickSort();
+int[] sortedArray = quickSort.SortArray_Quick(unsortedArray, 0, 7);
+Console.WriteLine($"[{string.Join(",", sortedArray)}]");
+
+
+
+#endregion
 
 #endregion
