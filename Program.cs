@@ -89,11 +89,11 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 
 #region Quick sort
 
-int[] unsortedArray = { 3,100, 99, 2,98, 4, 101, 1 };
+//int[] unsortedArray = { 3,100, 99, 2,98, 4, 101, 1 };
 
-QuickSort quickSort = new QuickSort();
-int[] sortedArray = quickSort.SortArray_Quick(unsortedArray, 0, 7);
-Console.WriteLine($"[{string.Join(",", sortedArray)}]");
+//QuickSort quickSort = new QuickSort();
+//int[] sortedArray = quickSort.SortArray_Quick(unsortedArray, 0, 7);
+//Console.WriteLine($"[{string.Join(",", sortedArray)}]");
 
 
 
