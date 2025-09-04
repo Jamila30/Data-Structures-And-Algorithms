@@ -3,6 +3,7 @@
 
 #region Linear Search
 
+using DataStructuresAndAlgorithms.DataStructures.LinkedList;
 using DataStructuresAndAlgorithms.SearchingAlgorithms.BinarySearch;
 using DataStructuresAndAlgorithms.SearchingAlgorithms.LinearSearch;
 using DataStructuresAndAlgorithms.SortingAlgorithms;
@@ -98,5 +99,25 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 
 
 #endregion
+
+#endregion
+
+
+#region Data Structures
+
+//LinkedList<string> list = new LinkedList<string>();
+//list.AddLast("test");
+//list.AddLast("test1");
+//list.AddLast("test2");
+
+//Console.WriteLine(string.Join(" ",list.Select(r=>r)));
+
+CustomLinkedList<string> nodeList = new CustomLinkedList<string>();
+nodeList.Add("Test");
+nodeList.Add("Test1");
+nodeList.Add("Test2");
+nodeList.Add("Test3");
+
+Console.WriteLine(string.Join(" ", nodeList.Select(r => r)));
 
 #endregion
