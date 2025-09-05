@@ -112,12 +112,22 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 
 //Console.WriteLine(string.Join(" ",list.Select(r=>r)));
 
-CustomLinkedList<string> nodeList = new CustomLinkedList<string>();
-nodeList.Add("Test");
-nodeList.Add("Test1");
-nodeList.Add("Test2");
-nodeList.Add("Test3");
+//CustomLinkedList<string> nodeList = new CustomLinkedList<string>();
 
-Console.WriteLine(string.Join(" ", nodeList.Select(r => r)));
+//nodeList.AddLast("Test");
+//nodeList.AddLast("Test1");
+//nodeList.AddLast("Test2");
+//nodeList.AddLast("Test3");
+
+//nodeList.AddFirst("Test");
+//nodeList.AddFirst("Test1");
+//nodeList.AddFirst("Test2");
+//nodeList.AddFirst("Test3");
+
+//nodeList.RemoveAny(1);
+//Console.WriteLine(string.Join(" ", nodeList.Select(r => r)));
+
+//Console.WriteLine(nodeList.Search("Test1"));
+//Console.WriteLine(nodeList.Search("Test111"));
 
 #endregion

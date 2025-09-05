@@ -7,6 +7,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList
     {
         internal T? Element;
         internal  CustomLinkedListNode<T>? Next { get; set; }
+        internal  CustomLinkedListNode<T>? Prev { get; set; }
 
         public CustomLinkedListNode()
         {
