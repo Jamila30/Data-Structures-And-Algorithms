@@ -4,6 +4,8 @@
 #region Linear Search
 
 using DataStructuresAndAlgorithms.DataStructures.LinkedList;
+using DataStructuresAndAlgorithms.DataStructures.LinkedList.Circular;
+using DataStructuresAndAlgorithms.DataStructures.LinkedList.Linear;
 using DataStructuresAndAlgorithms.SearchingAlgorithms.BinarySearch;
 using DataStructuresAndAlgorithms.SearchingAlgorithms.LinearSearch;
 using DataStructuresAndAlgorithms.SortingAlgorithms;
@@ -105,14 +107,18 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 
 #region Data Structures
 
+#region Linked List
+
+#region Linear Linked List
+
 //LinkedList<string> list = new LinkedList<string>();
 //list.AddLast("test");
 //list.AddLast("test1");
 //list.AddLast("test2");
 
-//Console.WriteLine(string.Join(" ",list.Select(r=>r)));
+//Console.WriteLine(string.Join(" ", list.Select(r => r)));
 
-//CustomLinkedList<string> nodeList = new CustomLinkedList<string>();
+//LinearLinkedList<string> nodeList = new LinearLinkedList<string>();
 
 //nodeList.AddLast("Test");
 //nodeList.AddLast("Test1");
@@ -129,5 +135,29 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 
 //Console.WriteLine(nodeList.Search("Test1"));
 //Console.WriteLine(nodeList.Search("Test111"));
+
+#endregion
+
+#region Circular Linked List
+
+CircularLinkedList<string> nodeList = new CircularLinkedList<string>();
+
+//nodeList.AddLast("Test");
+//nodeList.AddLast("Test1");
+//nodeList.AddLast("Test2");
+//nodeList.AddLast("Test3");
+
+//nodeList.AddFirst("Test");
+//nodeList.AddFirst("Test1");
+//nodeList.AddFirst("Test2");
+//nodeList.AddFirst("Test3");
+
+//Console.WriteLine(string.Join(" ", nodeList.Select(r => r)));
+
+
+#endregion
+
+
+#endregion
 
 #endregion
