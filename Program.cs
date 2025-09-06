@@ -140,7 +140,7 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 
 #region Circular Linked List
 
-CircularLinkedList<string> nodeList = new CircularLinkedList<string>();
+//CircularLinkedList<string> nodeList = new CircularLinkedList<string>();
 
 //nodeList.AddLast("Test");
 //nodeList.AddLast("Test1");
@@ -151,6 +151,12 @@ CircularLinkedList<string> nodeList = new CircularLinkedList<string>();
 //nodeList.AddFirst("Test1");
 //nodeList.AddFirst("Test2");
 //nodeList.AddFirst("Test3");
+
+//nodeList.AddToAny(1, "Added test for position 1");
+
+//nodeList.DeleteFirst();
+//nodeList.DeleteLast();
+//nodeList.DeleteAtPosition(0);
 
 //Console.WriteLine(string.Join(" ", nodeList.Select(r => r)));
 
