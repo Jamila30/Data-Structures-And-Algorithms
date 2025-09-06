@@ -2,6 +2,7 @@
 using System.Xml.Linq;
 using System.Collections;
 using System;
+using DataStructuresAndAlgorithms.DataStructures.LinkedList.Linear;
 
 namespace DataStructuresAndAlgorithms.DataStructures.LinkedList
 {
@@ -9,8 +10,8 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList
     {
         private int _size;
 
-        public CustomLinkedListNode<T>? _headNode;
-        public CustomLinkedListNode<T>? _tailNode;
+        public LinearLinkedListNode<T>? _headNode;
+        public LinearLinkedListNode<T>? _tailNode;
 
         public CustomLinkedList()
         {
@@ -22,7 +23,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList
         public bool IsEmpty() => _size == 0;
         public void AddLast(T element)
         {
-            CustomLinkedListNode<T> newNode = new CustomLinkedListNode<T>(element);
+            LinearLinkedListNode<T> newNode = new LinearLinkedListNode<T>(element);
             if (IsEmpty())
             {
                 _headNode = newNode;
@@ -36,7 +37,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList
         }
         public void AddFirst(T element)
         {
-            CustomLinkedListNode<T> newNode = new CustomLinkedListNode<T>(element);
+            LinearLinkedListNode<T> newNode = new LinearLinkedListNode<T>(element);
             if (IsEmpty())
             {
                 _headNode = newNode;
@@ -56,8 +57,8 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList
             {
                 throw new Exception("Invalid Position");
             }
-            CustomLinkedListNode<T> newNode = new CustomLinkedListNode<T>(element);
-            CustomLinkedListNode<T> prevNode = _headNode;
+            LinearLinkedListNode<T> newNode = new LinearLinkedListNode<T>(element);
+            LinearLinkedListNode<T> prevNode = _headNode;
             int i = 1;
             while (i < position - 1)
             {
@@ -76,7 +77,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList
                 return;
             }
 
-            CustomLinkedListNode<T> tempHeadNodeNext = _headNode.Next;
+            LinearLinkedListNode<T> tempHeadNodeNext = _headNode.Next;
             _headNode = tempHeadNodeNext;
 
             if (IsEmpty())
@@ -88,7 +89,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList
 
         public int Search(T searchKey)
         {
-            CustomLinkedListNode<T> searchNode= _headNode;
+            LinearLinkedListNode<T> searchNode= _headNode;
             int i=1;
             int index =0;
             while (i < _size - 1)
@@ -106,14 +107,14 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList
 
         public void InsertElementAsSorted(T value)
         {
-            CustomLinkedListNode<T> newNode= new CustomLinkedListNode<T>(value);
+            LinearLinkedListNode<T> newNode= new LinearLinkedListNode<T>(value);
             if (IsEmpty())
             {
                 _headNode=newNode;
             }
             else
             {
-                CustomLinkedListNode<T> current= _headNode;
+                LinearLinkedListNode<T> current= _headNode;
 
             }
         }
@@ -126,7 +127,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList
             }
 
             int i = 1;
-            CustomLinkedListNode<T> currentNode = _headNode;
+            LinearLinkedListNode<T> currentNode = _headNode;
             while (i < _size-1)
             {
                 currentNode=currentNode.Next;
@@ -158,13 +159,13 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList
             }
 
             int i = 1;
-            CustomLinkedListNode<T> currentNode = _headNode;
+            LinearLinkedListNode<T> currentNode = _headNode;
             while (i < position-1)
             {
                 currentNode = currentNode.Next;
                 i++;
             }
-            CustomLinkedListNode<T> deletedNode = currentNode.Next;
+            LinearLinkedListNode<T> deletedNode = currentNode.Next;
             currentNode.Next = deletedNode.Next;
 
 
@@ -181,7 +182,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList
 
         public IEnumerator<T> GetEnumerator()
         {
-            CustomLinkedListNode<T> current = _headNode;
+            LinearLinkedListNode<T> current = _headNode;
             while (current != null)
             {
                 yield return current.Element!;
