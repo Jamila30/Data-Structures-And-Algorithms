@@ -45,14 +45,40 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList.Doubly
             }
             else
             {
-               newNode.Next = _headNode;
-               _headNode.Prev = newNode;
-               _headNode= newNode;
+                newNode.Next = _headNode;
+                _headNode.Prev = newNode;
+                _headNode = newNode;
 
             }
             _size++;
         }
 
+        public void AddToPosition(int position, T item)
+        {
+            if (position <= 0 || position >= _size)
+            {
+                throw new Exception("Invalid Position");
+            }
+
+            DoublyLinkedListNode<T> newNode = new DoublyLinkedListNode<T>(item, null, null);
+            DoublyLinkedListNode<T> currentNode = _headNode;
+
+            int i = 1;
+            while (i < position - 1)
+            {
+                currentNode = currentNode.Next;
+                i++;
+            }
+            newNode.Prev = currentNode;
+            newNode.Next=currentNode.Next;
+            currentNode.Next=newNode;
+            newNode.Next.Prev=newNode;
+
+
+            _size++;
+
+
+        }
         public IEnumerator<T> GetEnumerator()
         {
             DoublyLinkedListNode<T> current = _headNode;
