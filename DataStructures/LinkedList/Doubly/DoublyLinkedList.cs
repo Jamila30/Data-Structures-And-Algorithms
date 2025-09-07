@@ -35,6 +35,24 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList.Doubly
             _size++;
         }
 
+        public void AddFirst(T item)
+        {
+            DoublyLinkedListNode<T> newNode = new DoublyLinkedListNode<T>(item, null, null);
+            if (IsEmpty())
+            {
+                _headNode = newNode;
+                _tailNode = newNode;
+            }
+            else
+            {
+               newNode.Next = _headNode;
+               _headNode.Prev = newNode;
+               _headNode= newNode;
+
+            }
+            _size++;
+        }
+
         public IEnumerator<T> GetEnumerator()
         {
             DoublyLinkedListNode<T> current = _headNode;
