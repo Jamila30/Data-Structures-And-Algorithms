@@ -5,6 +5,7 @@
 
 using DataStructuresAndAlgorithms.DataStructures.LinkedList;
 using DataStructuresAndAlgorithms.DataStructures.LinkedList.Circular;
+using DataStructuresAndAlgorithms.DataStructures.LinkedList.Doubly;
 using DataStructuresAndAlgorithms.DataStructures.LinkedList.Linear;
 using DataStructuresAndAlgorithms.SearchingAlgorithms.BinarySearch;
 using DataStructuresAndAlgorithms.SearchingAlgorithms.LinearSearch;
@@ -159,6 +160,20 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 //nodeList.DeleteAtPosition(0);
 
 //Console.WriteLine(string.Join(" ", nodeList.Select(r => r)));
+
+
+#endregion
+
+#region DoublyLinkedList
+
+DoublyLinkedList<string> nodeList = new DoublyLinkedList<string>();
+
+nodeList.AddLast("Test");
+nodeList.AddLast("Test1");
+nodeList.AddLast("Test2");
+nodeList.AddLast("Test3");
+
+Console.WriteLine(string.Join(" ", nodeList.Select(r => r)));
 
 
 #endregion
