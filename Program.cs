@@ -180,7 +180,12 @@ nodeList.AddLast("Test3");
 
 //nodeList.AddToPosition(3, "Pos3");
 
-Console.WriteLine(string.Join(" ", nodeList.Select(r => r)));
+//nodeList.DeleteFirst();
+//nodeList.DeleteLast();
+//nodeList.DeleteAtPosition(1);
+
+
+//Console.WriteLine(string.Join(" ", nodeList.Select(r => r)));
 
 
 #endregion

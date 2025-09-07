@@ -77,7 +77,71 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedList.Doubly
 
             _size++;
 
+        }
 
+        public void DeleteFirst()
+        {
+            if (IsEmpty())
+            {
+                return;
+            }
+            else
+            {
+                _headNode = _headNode.Next;
+            }
+            _size--;
+
+            if (IsEmpty())
+            {
+                _tailNode = null;
+            }
+            else 
+            {
+                _headNode.Prev = null;
+            }
+        }
+
+        public void DeleteLast()
+        {
+            if (IsEmpty())
+            {
+                return;
+            }
+            else
+            {
+                _tailNode= _tailNode.Prev;
+            }
+            _size--;
+
+            if (IsEmpty())
+            {
+                _headNode = null;
+            }
+            else 
+            {
+                _tailNode.Next = null;
+            }
+        }
+
+        public void DeleteAtPosition(int position)
+        {
+            if (position <= 0 || position >= _size)
+            {
+                throw new Exception("Invalid Position");
+            }
+
+            DoublyLinkedListNode<T> currentNode = _headNode;
+
+            int i = 1;
+            while (i < position - 1)
+            {
+                currentNode = currentNode.Next;
+                i++;
+            }
+            currentNode.Next.Next.Prev=currentNode;
+            currentNode.Next =currentNode.Next.Next;
+
+            _size--;
         }
         public IEnumerator<T> GetEnumerator()
         {
