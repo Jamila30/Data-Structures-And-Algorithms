@@ -166,12 +166,12 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 
 #region DoublyLinkedList
 
-DoublyLinkedList<string> nodeList = new DoublyLinkedList<string>();
+//DoublyLinkedList<string> nodeList = new DoublyLinkedList<string>();
 
-nodeList.AddLast("Test");
-nodeList.AddLast("Test1");
-nodeList.AddLast("Test2");
-nodeList.AddLast("Test3");
+//nodeList.AddLast("Test");
+//nodeList.AddLast("Test1");
+//nodeList.AddLast("Test2");
+//nodeList.AddLast("Test3");
 
 //nodeList.AddFirst("Test");
 //nodeList.AddFirst("Test1");
