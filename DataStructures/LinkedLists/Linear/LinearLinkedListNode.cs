@@ -7,8 +7,6 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedLists.Linear
     {
         internal T? Element;
         internal  LinearLinkedListNode<T>? Next { get; set; }
-        internal  LinearLinkedListNode<T>? Prev { get; set; }
-
         public LinearLinkedListNode()
         {
             
