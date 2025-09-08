@@ -2,18 +2,18 @@
 using System.Xml.Linq;
 using System.Collections;
 using System;
-using DataStructuresAndAlgorithms.DataStructures.LinkedList.Linear;
+using DataStructuresAndAlgorithms.DataStructures.LinkedLists.Linear;
 
-namespace DataStructuresAndAlgorithms.DataStructures.LinkedList
+namespace DataStructuresAndAlgorithms.DataStructures.LinkedLists
 {
-    public class CustomLinkedList<T> : IEnumerable<T>, IEnumerable
+    public class LinearLinkedList<T> : IEnumerable<T>, IEnumerable
     {
         private int _size;
 
         public LinearLinkedListNode<T>? _headNode;
         public LinearLinkedListNode<T>? _tailNode;
 
-        public CustomLinkedList()
+        public LinearLinkedList()
         {
             _size = 0;
             _headNode = null;

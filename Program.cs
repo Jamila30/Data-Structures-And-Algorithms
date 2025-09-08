@@ -3,14 +3,6 @@
 
 #region Linear Search
 
-using DataStructuresAndAlgorithms.DataStructures.LinkedList;
-using DataStructuresAndAlgorithms.DataStructures.LinkedList.Circular;
-using DataStructuresAndAlgorithms.DataStructures.LinkedList.Doubly;
-using DataStructuresAndAlgorithms.DataStructures.LinkedList.Linear;
-using DataStructuresAndAlgorithms.SearchingAlgorithms.BinarySearch;
-using DataStructuresAndAlgorithms.SearchingAlgorithms.LinearSearch;
-using DataStructuresAndAlgorithms.SortingAlgorithms;
-
 //int[] searchArray = [2, 1, 3, 4, 9, 6];
 
 //LinearSearchOperation linerSearchOperation = new LinearSearchOperation();
@@ -142,7 +134,6 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 #region Circular Linked List
 
 //CircularLinkedList<string> nodeList = new CircularLinkedList<string>();
-
 //nodeList.AddLast("Test");
 //nodeList.AddLast("Test1");
 //nodeList.AddLast("Test2");
@@ -187,6 +178,50 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 
 //Console.WriteLine(string.Join(" ", nodeList.Select(r => r)));
 
+
+#endregion
+
+
+#endregion
+
+#region Stack
+
+
+#region Array Base Stack  
+
+using DataStructuresAndAlgorithms.DataStructures.Stacks;
+using DataStructuresAndAlgorithms.DataStructures.Stacks.LinkedListBaseStack;
+
+//ArrayBaseStack<string> myStack = new ArrayBaseStack<string>(4);
+//myStack.Push("Test");
+//myStack.Push("Test1");
+//myStack.Push("Test2");
+//myStack.Push("Test3");
+//myStack.Push("Test4");
+
+
+//string peekValue =myStack.Peek();
+//Console.WriteLine($"Peek value : {peekValue}");
+
+//myStack.Pop();
+
+//Console.WriteLine(string.Join(" ", myStack.Select(s => s)));
+
+#endregion
+
+#region LinkedList Base Stack
+
+//StackLinkedList<string> myLinkedStack = new StackLinkedList<string>();
+//myLinkedStack.Push("Test");
+//myLinkedStack.Push("Test1");
+//myLinkedStack.Push("Test2");
+//myLinkedStack.Push("Test3");
+
+//myLinkedStack.Pop();
+
+//string peekValue = myLinkedStack.Peek();
+
+//Console.WriteLine(string.Join(" ", myLinkedStack.Select(s => s)));
 
 #endregion
 

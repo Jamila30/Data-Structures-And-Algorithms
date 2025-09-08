@@ -1,4 +1,4 @@
-﻿namespace DataStructuresAndAlgorithms.DataStructures.LinkedList.Circular
+﻿namespace DataStructuresAndAlgorithms.DataStructures.LinkedLists.Circular
 {
     public class CircularLinkedListNode<T>
     {
