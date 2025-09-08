@@ -3,14 +3,6 @@
 
 #region Linear Search
 
-using DataStructuresAndAlgorithms.DataStructures.LinkedList;
-using DataStructuresAndAlgorithms.DataStructures.LinkedList.Circular;
-using DataStructuresAndAlgorithms.DataStructures.LinkedList.Doubly;
-using DataStructuresAndAlgorithms.DataStructures.LinkedList.Linear;
-using DataStructuresAndAlgorithms.SearchingAlgorithms.BinarySearch;
-using DataStructuresAndAlgorithms.SearchingAlgorithms.LinearSearch;
-using DataStructuresAndAlgorithms.SortingAlgorithms;
-
 //int[] searchArray = [2, 1, 3, 4, 9, 6];
 
 //LinearSearchOperation linerSearchOperation = new LinearSearchOperation();
@@ -142,7 +134,6 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 #region Circular Linked List
 
 //CircularLinkedList<string> nodeList = new CircularLinkedList<string>();
-
 //nodeList.AddLast("Test");
 //nodeList.AddLast("Test1");
 //nodeList.AddLast("Test2");
@@ -190,6 +181,10 @@ using DataStructuresAndAlgorithms.SortingAlgorithms;
 
 #endregion
 
+
+#endregion
+
+#region Stack
 
 #endregion
 

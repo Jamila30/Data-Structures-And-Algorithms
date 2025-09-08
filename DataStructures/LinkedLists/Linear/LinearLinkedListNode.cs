@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace DataStructuresAndAlgorithms.DataStructures.LinkedList.Linear
+namespace DataStructuresAndAlgorithms.DataStructures.LinkedLists.Linear
 {
     public class LinearLinkedListNode<T>
     {

@@ -1,7 +1,6 @@
-﻿using DataStructuresAndAlgorithms.DataStructures.LinkedList.Linear;
-using System.Collections;
+﻿using System.Collections;
 
-namespace DataStructuresAndAlgorithms.DataStructures.LinkedList.Circular
+namespace DataStructuresAndAlgorithms.DataStructures.LinkedLists.Circular
 {
     public class CircularLinkedList<T> : IEnumerable<T>, IEnumerable
     {

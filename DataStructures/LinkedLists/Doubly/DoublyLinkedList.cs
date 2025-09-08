@@ -1,7 +1,6 @@
-﻿using DataStructuresAndAlgorithms.DataStructures.LinkedList.Circular;
-using System.Collections;
+﻿using System.Collections;
 
-namespace DataStructuresAndAlgorithms.DataStructures.LinkedList.Doubly
+namespace DataStructuresAndAlgorithms.DataStructures.LinkedLists.Doubly
 {
     public class DoublyLinkedList<T> : IEnumerable<T>, IEnumerable
     {

@@ -1,4 +1,4 @@
-﻿namespace DataStructuresAndAlgorithms.DataStructures.LinkedList.Doubly
+﻿namespace DataStructuresAndAlgorithms.DataStructures.LinkedLists.Doubly
 {
     public class DoublyLinkedListNode<T>
     {
