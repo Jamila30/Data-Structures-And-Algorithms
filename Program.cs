@@ -1,4 +1,5 @@
 ﻿Console.WriteLine("Start");
+
 #region Searching Algorithms
 
 #region Linear Search
