@@ -186,6 +186,46 @@
 
 #region Stack
 
+
+#region Array Base Stack  
+
+using DataStructuresAndAlgorithms.DataStructures.Stacks;
+using DataStructuresAndAlgorithms.DataStructures.Stacks.LinkedListBaseStack;
+
+//ArrayBaseStack<string> myStack = new ArrayBaseStack<string>(4);
+//myStack.Push("Test");
+//myStack.Push("Test1");
+//myStack.Push("Test2");
+//myStack.Push("Test3");
+//myStack.Push("Test4");
+
+
+//string peekValue =myStack.Peek();
+//Console.WriteLine($"Peek value : {peekValue}");
+
+//myStack.Pop();
+
+//Console.WriteLine(string.Join(" ", myStack.Select(s => s)));
+
+#endregion
+
+#region LinkedList Base Stack
+
+//StackLinkedList<string> myLinkedStack = new StackLinkedList<string>();
+//myLinkedStack.Push("Test");
+//myLinkedStack.Push("Test1");
+//myLinkedStack.Push("Test2");
+//myLinkedStack.Push("Test3");
+
+//myLinkedStack.Pop();
+
+//string peekValue = myLinkedStack.Peek();
+
+//Console.WriteLine(string.Join(" ", myLinkedStack.Select(s => s)));
+
+#endregion
+
+
 #endregion
 
 #endregion
