@@ -1,4 +1,5 @@
-﻿
+﻿Console.WriteLine("Start");
+
 #region Searching Algorithms
 
 #region Linear Search
@@ -189,8 +190,8 @@
 
 #region Array Base Stack  
 
-using DataStructuresAndAlgorithms.DataStructures.Stacks;
-using DataStructuresAndAlgorithms.DataStructures.Stacks.LinkedListBaseStack;
+//using DataStructuresAndAlgorithms.DataStructures.Stacks;
+//using DataStructuresAndAlgorithms.DataStructures.Stacks.LinkedListBaseStack;
 
 //ArrayBaseStack<string> myStack = new ArrayBaseStack<string>(4);
 //myStack.Push("Test");
@@ -227,5 +228,7 @@ using DataStructuresAndAlgorithms.DataStructures.Stacks.LinkedListBaseStack;
 
 
 #endregion
+
+
 
 #endregion
