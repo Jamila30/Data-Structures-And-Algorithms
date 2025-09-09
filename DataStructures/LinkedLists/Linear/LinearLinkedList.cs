@@ -48,7 +48,6 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedLists
                 newNode.Next = _headNode;
                 _headNode = newNode;
             };
-            _tailNode = newNode;
             _size++;
         }
         public void AddPosition(T element, int position)
@@ -84,7 +83,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.LinkedLists
             {
                 _tailNode = null;
             }
-
+            _size--;
         }
 
         public int Search(T searchKey)
