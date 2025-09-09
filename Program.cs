@@ -1,4 +1,8 @@
-﻿Console.WriteLine("Start");
+﻿using DataStructuresAndAlgorithms.DataStructures.Deques.LinkedListBaseDeque;
+using DataStructuresAndAlgorithms.DataStructures.Queues;
+using DataStructuresAndAlgorithms.DataStructures.Queues.LinkedListBaseQueue;
+
+Console.WriteLine("Start");
 
 #region Searching Algorithms
 
@@ -229,6 +233,76 @@
 
 #endregion
 
+#region Queue
 
+#region Array Base Queue
+
+//ArrayBaseQueue<string> queue = new ArrayBaseQueue<string>();
+//queue.Enqueue("a");
+//queue.Enqueue("b");
+//queue.Enqueue("c");
+//queue.Enqueue("d");
+//queue.Enqueue("e");
+
+//queue.Dequeue();
+
+//queue.Enqueue("f");
+//queue.Enqueue("g");
+//queue.Enqueue("h");
+//queue.Enqueue("i");
+//queue.Enqueue("x");
+
+
+#endregion
+
+#region Linked List base Queue
+
+
+//QueueLinkedList<string> queueLinkedList = new QueueLinkedList<string>();
+//queueLinkedList.Enqueue("a");
+//queueLinkedList.Enqueue("b");
+//queueLinkedList.Enqueue("c");
+//queueLinkedList.Enqueue("d");
+//queueLinkedList.Enqueue("e");
+
+//queueLinkedList.Dequeue();
+
+//string firstElement = queueLinkedList.First();
+//Console.WriteLine(firstElement);
+
+
+
+//Console.WriteLine(string.Join(" | ", queueLinkedList.Select(r => r)));
+
+#endregion
+
+
+#endregion
+
+#region Deque
+
+//DequeLinkedList<string> dequeLinkedList = new DequeLinkedList<string>();
+//dequeLinkedList.AddLast("a");
+//dequeLinkedList.AddLast("b");
+//dequeLinkedList.AddLast("c");
+//dequeLinkedList.AddFirst("d");
+//dequeLinkedList.AddFirst("e");
+//dequeLinkedList.AddFirst("f");
+
+//string firstElement = dequeLinkedList.First();
+//string lastElement = dequeLinkedList.Last();
+//Console.WriteLine(firstElement);
+//Console.WriteLine(lastElement);
+
+//Console.WriteLine(string.Join(" | ", dequeLinkedList.Select(r => r)));
+
+//dequeLinkedList.RemoveFirst();
+//dequeLinkedList.RemoveLast();
+
+//Console.WriteLine(string.Join(" | ", dequeLinkedList.Select(r => r)));
+
+
+
+#endregion
 
 #endregion
