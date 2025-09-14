@@ -5,7 +5,7 @@ using System;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Collections;
 
-namespace DataStructuresAndAlgorithms.DataStructures.Queues
+namespace DataStructuresAndAlgorithms.DataStructures.Linear.Queues
 {
     public class ArrayBaseQueue<T> :IEnumerable<T>,IEnumerable
     {
@@ -63,7 +63,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.Queues
 
             _arrayQueue = newarray;
             _head = 0;
-            _tail = (_size == capacity) ? 0 : _size;
+            _tail = _size == capacity ? 0 : _size;
         }
 
         private void MoveNext(ref int index)

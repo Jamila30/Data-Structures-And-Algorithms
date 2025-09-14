@@ -1,7 +1,6 @@
-﻿using DataStructuresAndAlgorithms.DataStructures.LinkedLists.Linear;
-using System.Collections;
+﻿using System.Collections;
 
-namespace DataStructuresAndAlgorithms.DataStructures.Deques.LinkedListBaseDeque
+namespace DataStructuresAndAlgorithms.DataStructures.Linear.Deques.LinkedListBaseDeque
 {
     public class DequeLinkedList<T> : IEnumerable<T>, IEnumerable
     {

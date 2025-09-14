@@ -2,9 +2,8 @@
 using System.Xml.Linq;
 using System.Collections;
 using System;
-using DataStructuresAndAlgorithms.DataStructures.LinkedLists.Linear;
 
-namespace DataStructuresAndAlgorithms.DataStructures.LinkedLists
+namespace DataStructuresAndAlgorithms.DataStructures.Linear.LinkedLists.Linear
 {
     public class LinearLinkedList<T> : IEnumerable<T>, IEnumerable
     {

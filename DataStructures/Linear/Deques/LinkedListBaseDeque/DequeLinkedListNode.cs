@@ -1,6 +1,4 @@
-﻿using DataStructuresAndAlgorithms.DataStructures.Queues.LinkedListBaseQueue;
-
-namespace DataStructuresAndAlgorithms.DataStructures.Deques.LinkedListBaseDeque
+﻿namespace DataStructuresAndAlgorithms.DataStructures.Linear.Deques.LinkedListBaseDeque
 {
     public class DequeLinkedListNode<T>
     {
