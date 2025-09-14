@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Drawing;
 
-namespace DataStructuresAndAlgorithms.DataStructures.Stacks
+namespace DataStructuresAndAlgorithms.DataStructures.Linear.Stacks
 {
     public class ArrayBaseStack<T> :IEnumerable<T> ,IEnumerable
     {

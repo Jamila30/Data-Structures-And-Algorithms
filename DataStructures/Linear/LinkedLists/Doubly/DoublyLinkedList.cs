@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace DataStructuresAndAlgorithms.DataStructures.LinkedLists.Doubly
+namespace DataStructuresAndAlgorithms.DataStructures.Linear.LinkedLists.Doubly
 {
     public class DoublyLinkedList<T> : IEnumerable<T>, IEnumerable
     {

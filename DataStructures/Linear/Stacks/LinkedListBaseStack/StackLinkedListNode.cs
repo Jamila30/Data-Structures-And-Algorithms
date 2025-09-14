@@ -1,4 +1,4 @@
-﻿namespace DataStructuresAndAlgorithms.DataStructures.Stacks.LinkedListBaseStack
+﻿namespace DataStructuresAndAlgorithms.DataStructures.Linear.Stacks.LinkedListBaseStack
 {
     public class StackLinkedListNode<T>
     {

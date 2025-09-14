@@ -1,7 +1,6 @@
-﻿using DataStructuresAndAlgorithms.DataStructures.LinkedLists.Linear;
-using System.Collections;
+﻿using System.Collections;
 
-namespace DataStructuresAndAlgorithms.DataStructures.Stacks.LinkedListBaseStack
+namespace DataStructuresAndAlgorithms.DataStructures.Linear.Stacks.LinkedListBaseStack
 {
     public class StackLinkedList<T> : IEnumerable, IEnumerable<T>
     {

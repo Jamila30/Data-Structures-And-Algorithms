@@ -1,6 +1,4 @@
-﻿using DataStructuresAndAlgorithms.DataStructures.Deques.LinkedListBaseDeque;
-using DataStructuresAndAlgorithms.DataStructures.Queues;
-using DataStructuresAndAlgorithms.DataStructures.Queues.LinkedListBaseQueue;
+﻿using DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees;
 
 Console.WriteLine("Start");
 
@@ -104,6 +102,8 @@ Console.WriteLine("Start");
 
 
 #region Data Structures
+
+#region Linear
 
 #region Linked List
 
@@ -302,6 +302,32 @@ Console.WriteLine("Start");
 //Console.WriteLine(string.Join(" | ", dequeLinkedList.Select(r => r)));
 
 
+
+#endregion
+#endregion
+
+#region Non-Linear
+
+BinarySearchTreeLinkedList<int> binarySearchTreeLinkedList = new BinarySearchTreeLinkedList<int>();
+//binarySearchTreeLinkedList.IterativeInsert(50);
+//binarySearchTreeLinkedList.IterativeInsert(30);
+//binarySearchTreeLinkedList.IterativeInsert(20);
+//binarySearchTreeLinkedList.IterativeInsert(10);
+//binarySearchTreeLinkedList.IterativeInsert(40);
+//binarySearchTreeLinkedList.IterativeInsert(60);
+//binarySearchTreeLinkedList.IterativeInsert(90);
+
+
+binarySearchTreeLinkedList.RecursiveInsert(50);
+binarySearchTreeLinkedList.RecursiveInsert(30);
+binarySearchTreeLinkedList.RecursiveInsert(80);
+binarySearchTreeLinkedList.RecursiveInsert(10);
+binarySearchTreeLinkedList.RecursiveInsert(40);
+binarySearchTreeLinkedList.RecursiveInsert(60);
+binarySearchTreeLinkedList.RecursiveInsert(90);
+
+
+Console.WriteLine("Correct -done");
 
 #endregion
 

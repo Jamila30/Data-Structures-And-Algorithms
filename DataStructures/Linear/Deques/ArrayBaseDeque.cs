@@ -1,4 +1,4 @@
-﻿namespace DataStructuresAndAlgorithms.DataStructures.Deques
+﻿namespace DataStructuresAndAlgorithms.DataStructures.Linear.Deques
 {
     public class ArrayBaseDeque
     {

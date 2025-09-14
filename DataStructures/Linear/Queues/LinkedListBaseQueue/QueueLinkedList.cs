@@ -1,9 +1,6 @@
-﻿using DataStructuresAndAlgorithms.DataStructures.Stacks.LinkedListBaseStack;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections;
 
-namespace DataStructuresAndAlgorithms.DataStructures.Queues.LinkedListBaseQueue
+namespace DataStructuresAndAlgorithms.DataStructures.Linear.Queues.LinkedListBaseQueue
 {
     public class QueueLinkedList<T> :IEnumerable<T>,IEnumerable
     {

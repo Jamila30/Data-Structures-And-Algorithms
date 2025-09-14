@@ -1,6 +1,4 @@
-﻿using DataStructuresAndAlgorithms.DataStructures.Stacks.LinkedListBaseStack;
-
-namespace DataStructuresAndAlgorithms.DataStructures.Queues.LinkedListBaseQueue
+﻿namespace DataStructuresAndAlgorithms.DataStructures.Linear.Queues.LinkedListBaseQueue
 {
     public class QueueLinkedListNode<T>
     {
