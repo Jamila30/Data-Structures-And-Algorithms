@@ -318,13 +318,13 @@ BinarySearchTreeLinkedList<int> binarySearchTreeLinkedList = new BinarySearchTre
 //binarySearchTreeLinkedList.IterativeInsert(90);
 
 
-binarySearchTreeLinkedList.RecursiveInsert(50);
-binarySearchTreeLinkedList.RecursiveInsert(30);
-binarySearchTreeLinkedList.RecursiveInsert(80);
-binarySearchTreeLinkedList.RecursiveInsert(10);
-binarySearchTreeLinkedList.RecursiveInsert(40);
-binarySearchTreeLinkedList.RecursiveInsert(60);
-binarySearchTreeLinkedList.RecursiveInsert(90);
+binarySearchTreeLinkedList.RecursiveInsert(50,binarySearchTreeLinkedList._root);
+binarySearchTreeLinkedList.RecursiveInsert(30,binarySearchTreeLinkedList._root);
+//binarySearchTreeLinkedList.RecursiveInsert(80);
+//binarySearchTreeLinkedList.RecursiveInsert(10);
+//binarySearchTreeLinkedList.RecursiveInsert(40);
+//binarySearchTreeLinkedList.RecursiveInsert(60);
+//binarySearchTreeLinkedList.RecursiveInsert(90);
 
 
 Console.WriteLine("Correct -done");
