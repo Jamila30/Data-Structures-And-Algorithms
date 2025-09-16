@@ -58,18 +58,31 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
 
         }
 
-        public void RecursiveInsert(T item, BinarySearchTreeLinkedListNode<T>? troot =null)
+        public BinarySearchTreeLinkedListNode<T> RecursiveInsert(T item, BinarySearchTreeLinkedListNode<T>? tempRoot = null)
         {
-            BinarySearchTreeLinkedListNode<T> newNode = new BinarySearchTreeLinkedListNode<T>(item);
 
-            if (troot != null)
+            if (tempRoot != null)
             {
-
+                if (item.CompareTo(tempRoot.Element) < 0)
+                {
+                    tempRoot.LeftChild = RecursiveInsert(item, tempRoot.LeftChild);
+                }
+                else if (item.CompareTo(tempRoot.Element) > 0)
+                {
+                    tempRoot.RightChild = RecursiveInsert(item, tempRoot.RightChild);
+                }
+                else
+                {
+                    throw new InvalidOperationException("item equal to node value");
+                }
             }
             else
             {
-                _root=newNode;
+                BinarySearchTreeLinkedListNode<T> newNode = new BinarySearchTreeLinkedListNode<T>(item);
+                tempRoot = newNode;
             }
+            _size++;
+            return tempRoot;
         }
 
 
