@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Xml.Linq;
 
 namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
 {
@@ -58,18 +59,65 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
 
         }
 
-        public BinarySearchTreeLinkedListNode<T> RecursiveInsert(T item, BinarySearchTreeLinkedListNode<T>? tempRoot = null)
-        {
+        //public BinarySearchTreeLinkedListNode<T> RecursiveInsert(T item, BinarySearchTreeLinkedListNode<T>? tempRoot =null )
+        //{
+        //    BinarySearchTreeLinkedListNode<T> newNode = new BinarySearchTreeLinkedListNode<T>(item);
+        //    if(_root == null)
+        //    {
+        //        _root = newNode;
+        //        return newNode;
+        //    }
 
+        //    //if (tempRoot != _root) {
+
+        //        if (tempRoot == null)
+        //        {
+        //            _size++;
+        //            tempRoot = newNode;
+        //        }
+        //        else
+        //        {
+        //            if (item.CompareTo(tempRoot.Element) < 0)
+        //            {
+        //                _size++;
+        //                tempRoot.LeftChild = RecursiveInsert(item, tempRoot.LeftChild);
+        //            }
+        //            else if (item.CompareTo(tempRoot.Element) > 0)
+        //            {
+        //                _size++;
+        //                tempRoot.RightChild = RecursiveInsert(item, tempRoot.RightChild);
+        //            }
+        //            else
+        //            {
+        //               _root= newNode;
+        //            }
+
+        //        }
+            
+        //    //else 
+        //    //{
+        //    //    //_root=newNode;
+        //    //    tempRoot = newNode;             
+        //    //    RecursiveInsert(item, tempRoot);
+
+        //    //}
+
+
+           
+        //    _size++;
+        //    return tempRoot;
+        //}
+        public BinarySearchTreeLinkedListNode<T> RecursiveInsert2(T item, BinarySearchTreeLinkedListNode<T>? tempRoot)
+        {
             if (tempRoot != null)
             {
                 if (item.CompareTo(tempRoot.Element) < 0)
                 {
-                    tempRoot.LeftChild = RecursiveInsert(item, tempRoot.LeftChild);
+                    tempRoot.LeftChild = RecursiveInsert2(item, tempRoot.LeftChild);
                 }
                 else if (item.CompareTo(tempRoot.Element) > 0)
                 {
-                    tempRoot.RightChild = RecursiveInsert(item, tempRoot.RightChild);
+                    tempRoot.RightChild = RecursiveInsert2(item, tempRoot.RightChild);
                 }
                 else
                 {
