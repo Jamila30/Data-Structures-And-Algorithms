@@ -309,17 +309,23 @@ Console.WriteLine("Start");
 #region Non-Linear
 
 BinarySearchTreeLinkedList<int> binarySearchTreeLinkedList = new BinarySearchTreeLinkedList<int>();
-//binarySearchTreeLinkedList.IterativeInsert(50);
-//binarySearchTreeLinkedList.IterativeInsert(30);
-//binarySearchTreeLinkedList.IterativeInsert(20);
-//binarySearchTreeLinkedList.IterativeInsert(10);
-//binarySearchTreeLinkedList.IterativeInsert(40);
-//binarySearchTreeLinkedList.IterativeInsert(60);
-//binarySearchTreeLinkedList.IterativeInsert(90);
+binarySearchTreeLinkedList.IterativeInsert(50);
+binarySearchTreeLinkedList.IterativeInsert(30);
+binarySearchTreeLinkedList.IterativeInsert(20);
+binarySearchTreeLinkedList.IterativeInsert(10);
+binarySearchTreeLinkedList.IterativeInsert(40);
+binarySearchTreeLinkedList.IterativeInsert(60);
+binarySearchTreeLinkedList.IterativeInsert(90);
 
+//binarySearchTreeLinkedList.PreOrderBinarySearchTree(binarySearchTreeLinkedList._root);
+//binarySearchTreeLinkedList.PostOrderBinarySearchTree(binarySearchTreeLinkedList._root);
+//binarySearchTreeLinkedList.InOrderBinarySearchTree(binarySearchTreeLinkedList._root);
 
-binarySearchTreeLinkedList.RecursiveInsert(50,binarySearchTreeLinkedList._root);
-binarySearchTreeLinkedList.RecursiveInsert(30,binarySearchTreeLinkedList._root);
+//binarySearchTreeLinkedList.RecursiveInsert2(50,binarySearchTreeLinkedList._root);
+//binarySearchTreeLinkedList.RecursiveInsert2(30, binarySearchTreeLinkedList._root);
+
+//binarySearchTreeLinkedList.RecursiveInsert(50);
+//binarySearchTreeLinkedList.RecursiveInsert(30);
 //binarySearchTreeLinkedList.RecursiveInsert(80);
 //binarySearchTreeLinkedList.RecursiveInsert(10);
 //binarySearchTreeLinkedList.RecursiveInsert(40);
@@ -327,7 +333,7 @@ binarySearchTreeLinkedList.RecursiveInsert(30,binarySearchTreeLinkedList._root);
 //binarySearchTreeLinkedList.RecursiveInsert(90);
 
 
-Console.WriteLine("Correct -done");
+//Console.WriteLine("Correct -done");
 
 #endregion
 
