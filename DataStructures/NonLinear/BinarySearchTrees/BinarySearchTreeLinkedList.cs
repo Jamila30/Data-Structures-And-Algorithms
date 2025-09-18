@@ -93,7 +93,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
         //            }
 
         //        }
-            
+
         //    //else 
         //    //{
         //    //    //_root=newNode;
@@ -103,7 +103,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
         //    //}
 
 
-           
+
         //    _size++;
         //    return tempRoot;
         //}
@@ -133,7 +133,40 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
             return tempRoot;
         }
 
+        public void PreOrderBinarySearchTree(BinarySearchTreeLinkedListNode<T> node = null)
+        {
+            if (node != null)
+            {
+                Console.WriteLine(node.Element);
+                PreOrderBinarySearchTree(node?.LeftChild);
+                PreOrderBinarySearchTree(node.RightChild);
 
+            }
+        }
+
+        public void PostOrderBinarySearchTree(BinarySearchTreeLinkedListNode<T> node = null)
+        {
+            if (node != null)
+            {
+                PostOrderBinarySearchTree(node?.LeftChild);
+                PostOrderBinarySearchTree(node.RightChild);
+                Console.WriteLine(node.Element);
+
+            }
+        }
+
+        public void InOrderBinarySearchTree(BinarySearchTreeLinkedListNode<T> node = null)
+        {
+            if (node != null)
+            {
+                InOrderBinarySearchTree(node?.LeftChild);
+                Console.WriteLine(node.Element);
+                InOrderBinarySearchTree(node.RightChild);
+
+            }
+        }
+
+       
     }
 }
 
