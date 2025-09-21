@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DataStructuresAndAlgorithms.DataStructures.Linear.Queues.LinkedListBaseQueue;
+using System.Collections;
 using System.Xml.Linq;
 
 namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
@@ -166,7 +167,30 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
             }
         }
 
-       
+        public void LevelOrderBinarySearchTree()
+        {
+            Queue<BinarySearchTreeLinkedListNode<T>> binarySearchTreeQueue = new Queue<BinarySearchTreeLinkedListNode<T>>();
+            BinarySearchTreeLinkedListNode<T> currentNode = _root;
+            Console.WriteLine(currentNode.Element);
+            binarySearchTreeQueue.Enqueue(currentNode);
+
+            while (binarySearchTreeQueue.Any())
+            {
+                currentNode = binarySearchTreeQueue.Dequeue();
+                if(currentNode.LeftChild != null)
+                {
+                    Console.WriteLine(currentNode.LeftChild.Element);
+                    binarySearchTreeQueue.Enqueue(currentNode.LeftChild);
+                }
+                if (currentNode.RightChild != null)
+                {
+                    Console.WriteLine(currentNode.RightChild.Element);
+                    binarySearchTreeQueue.Enqueue(currentNode.RightChild);
+                }
+            }
+        }
+
+      
     }
 }
 
