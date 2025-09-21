@@ -309,13 +309,13 @@ Console.WriteLine("Start");
 #region Non-Linear
 
 BinarySearchTreeLinkedList<int> binarySearchTreeLinkedList = new BinarySearchTreeLinkedList<int>();
-//binarySearchTreeLinkedList.IterativeInsert(50);
-//binarySearchTreeLinkedList.IterativeInsert(30);
-//binarySearchTreeLinkedList.IterativeInsert(20);
-//binarySearchTreeLinkedList.IterativeInsert(10);
-//binarySearchTreeLinkedList.IterativeInsert(40);
-//binarySearchTreeLinkedList.IterativeInsert(60);
-//binarySearchTreeLinkedList.IterativeInsert(90);
+binarySearchTreeLinkedList.IterativeInsert(50);
+binarySearchTreeLinkedList.IterativeInsert(30);
+binarySearchTreeLinkedList.IterativeInsert(20);
+binarySearchTreeLinkedList.IterativeInsert(10);
+binarySearchTreeLinkedList.IterativeInsert(40);
+binarySearchTreeLinkedList.IterativeInsert(60);
+binarySearchTreeLinkedList.IterativeInsert(90);
 
 //binarySearchTreeLinkedList.PreOrderBinarySearchTree(binarySearchTreeLinkedList._root);
 //binarySearchTreeLinkedList.PostOrderBinarySearchTree(binarySearchTreeLinkedList._root);
@@ -364,7 +364,11 @@ BinarySearchTreeLinkedList<int> binarySearchTreeLinkedList = new BinarySearchTre
 //Console.WriteLine("----");
 //binarySearchTreeLinkedList.InOrderBinarySearchTree(binarySearchTreeLinkedList2._root);
 
-Console.WriteLine("Correct -done");
+//int countOfNumber=binarySearchTreeLinkedList.GetCountOfNumberInBinarySearchTree(binarySearchTreeLinkedList._root);
+//Console.WriteLine(countOfNumber);
+//int height=binarySearchTreeLinkedList.GetHeightOfBinarysearchTree(binarySearchTreeLinkedList._root);
+//Console.WriteLine(height-1);//0dan baslayir deye
+//Console.WriteLine("Correct -done");
 
 #endregion
 

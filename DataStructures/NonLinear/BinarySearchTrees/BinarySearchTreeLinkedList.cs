@@ -162,7 +162,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
             if (node != null)
             {
                 InOrderBinarySearchTree(node?.LeftChild);
-                Console.Write(node.Element+ "\t");
+                Console.Write(node.Element + "\t");
                 InOrderBinarySearchTree(node.RightChild);
 
             }
@@ -371,14 +371,14 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
             if (currentNode == null)
                 return false; // Element tapılmadı
 
-            if (currentNode.LeftChild != null && currentNode.RightChild!=null) 
-            { 
-                BinarySearchTreeLinkedListNode<T> leftSideNode= currentNode.LeftChild;
+            if (currentNode.LeftChild != null && currentNode.RightChild != null)
+            {
+                BinarySearchTreeLinkedListNode<T> leftSideNode = currentNode.LeftChild;
                 BinarySearchTreeLinkedListNode<T> currentNodeCopy = currentNode;
-                while (leftSideNode.RightChild != null) 
+                while (leftSideNode.RightChild != null)
                 {
                     currentNodeCopy = leftSideNode;
-                    leftSideNode=leftSideNode.RightChild;
+                    leftSideNode = leftSideNode.RightChild;
                 }
                 currentNode.Element = leftSideNode.Element;
                 currentNode = leftSideNode;
@@ -386,13 +386,13 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
             }
 
             BinarySearchTreeLinkedListNode<T> c = null;
-            if(currentNode.LeftChild != null)
+            if (currentNode.LeftChild != null)
             {
-                c= currentNode.LeftChild;
+                c = currentNode.LeftChild;
             }
             else
             {
-                c= currentNode.RightChild;
+                c = currentNode.RightChild;
             }
 
             if (currentNode == _root)
@@ -410,7 +410,44 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
                     parentNode.RightChild = c;
                 }
             }
+
+            _size--;
             return true;
+
+        }
+
+        public int GetCountOfNumberInBinarySearchTree(BinarySearchTreeLinkedListNode<T> currentNode)
+        {
+            if (currentNode != null)
+            {
+                int leftCount = GetCountOfNumberInBinarySearchTree(currentNode.LeftChild);
+                int rightCount = GetCountOfNumberInBinarySearchTree(currentNode.RightChild);
+                return leftCount + rightCount + 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public int GetHeightOfBinarysearchTree(BinarySearchTreeLinkedListNode<T> currentNode)
+        {
+            if (currentNode != null)
+            {
+                int heightLeft = GetCountOfNumberInBinarySearchTree(currentNode.LeftChild); 
+                int heightRight = GetCountOfNumberInBinarySearchTree(currentNode.LeftChild);
+                if (heightLeft > heightRight) {
+                    return heightLeft+1;
+                }
+                else
+                {
+                    return heightRight+1;
+                }
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
