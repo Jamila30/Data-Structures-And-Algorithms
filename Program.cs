@@ -309,13 +309,13 @@ Console.WriteLine("Start");
 #region Non-Linear
 
 BinarySearchTreeLinkedList<int> binarySearchTreeLinkedList = new BinarySearchTreeLinkedList<int>();
-binarySearchTreeLinkedList.IterativeInsert(50);
-binarySearchTreeLinkedList.IterativeInsert(30);
-binarySearchTreeLinkedList.IterativeInsert(20);
-binarySearchTreeLinkedList.IterativeInsert(10);
-binarySearchTreeLinkedList.IterativeInsert(40);
-binarySearchTreeLinkedList.IterativeInsert(60);
-binarySearchTreeLinkedList.IterativeInsert(90);
+//binarySearchTreeLinkedList.IterativeInsert(50);
+//binarySearchTreeLinkedList.IterativeInsert(30);
+//binarySearchTreeLinkedList.IterativeInsert(20);
+//binarySearchTreeLinkedList.IterativeInsert(10);
+//binarySearchTreeLinkedList.IterativeInsert(40);
+//binarySearchTreeLinkedList.IterativeInsert(60);
+//binarySearchTreeLinkedList.IterativeInsert(90);
 
 //binarySearchTreeLinkedList.PreOrderBinarySearchTree(binarySearchTreeLinkedList._root);
 //binarySearchTreeLinkedList.PostOrderBinarySearchTree(binarySearchTreeLinkedList._root);
@@ -323,7 +323,9 @@ binarySearchTreeLinkedList.IterativeInsert(90);
 //binarySearchTreeLinkedList.LevelOrderBinarySearchTree();
 //Console.WriteLine(binarySearchTreeLinkedList.Search(110)); 
 //binarySearchTreeLinkedList.DeleteLeafNode(30);
-binarySearchTreeLinkedList.DeleteNodeWithOneSubTree(20);
+//binarySearchTreeLinkedList.DeleteNodeWithOneSubTree(20);
+
+
 
 //binarySearchTreeLinkedList.RecursiveInsert2(50,binarySearchTreeLinkedList._root);
 //binarySearchTreeLinkedList.RecursiveInsert2(30, binarySearchTreeLinkedList._root);
@@ -336,6 +338,31 @@ binarySearchTreeLinkedList.DeleteNodeWithOneSubTree(20);
 //binarySearchTreeLinkedList.RecursiveInsert(60);
 //binarySearchTreeLinkedList.RecursiveInsert(90);
 
+//binarySearchTreeLinkedList.IterativeInsert(25);
+//binarySearchTreeLinkedList.IterativeInsert(15);
+//binarySearchTreeLinkedList.IterativeInsert(35);
+//binarySearchTreeLinkedList.IterativeInsert(10);
+//binarySearchTreeLinkedList.IterativeInsert(20);
+//binarySearchTreeLinkedList.IterativeInsert(30);
+//binarySearchTreeLinkedList.IterativeInsert(40);
+//binarySearchTreeLinkedList.IterativeInsert(5);
+//binarySearchTreeLinkedList.IterativeInsert(12);
+//binarySearchTreeLinkedList.IterativeInsert(18);
+//binarySearchTreeLinkedList.IterativeInsert(22);
+//binarySearchTreeLinkedList.IterativeInsert(28);
+//binarySearchTreeLinkedList.IterativeInsert(32);
+//binarySearchTreeLinkedList.IterativeInsert(38);
+//binarySearchTreeLinkedList.IterativeInsert(42);
+
+//BinarySearchTreeLinkedList<int> binarySearchTreeLinkedList2 = binarySearchTreeLinkedList;
+
+
+
+//binarySearchTreeLinkedList.Delete(15);
+//binarySearchTreeLinkedList2.DeleteNodeWithBothSubTree(15);
+//binarySearchTreeLinkedList.InOrderBinarySearchTree(binarySearchTreeLinkedList._root);
+//Console.WriteLine("----");
+//binarySearchTreeLinkedList.InOrderBinarySearchTree(binarySearchTreeLinkedList2._root);
 
 Console.WriteLine("Correct -done");
 
