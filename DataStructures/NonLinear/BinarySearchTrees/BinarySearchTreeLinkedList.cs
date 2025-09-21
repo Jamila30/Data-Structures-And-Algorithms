@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DataStructuresAndAlgorithms.DataStructures.Linear.Queues.LinkedListBaseQueue;
+using System.Collections;
 using System.Xml.Linq;
 
 namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
@@ -166,7 +167,141 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
             }
         }
 
-       
+        public void LevelOrderBinarySearchTree()
+        {
+            Queue<BinarySearchTreeLinkedListNode<T>> binarySearchTreeQueue = new Queue<BinarySearchTreeLinkedListNode<T>>();
+            BinarySearchTreeLinkedListNode<T> currentNode = _root;
+            Console.WriteLine(currentNode.Element);
+            binarySearchTreeQueue.Enqueue(currentNode);
+
+            while (binarySearchTreeQueue.Any())
+            {
+                currentNode = binarySearchTreeQueue.Dequeue();
+                if (currentNode.LeftChild != null)
+                {
+                    Console.WriteLine(currentNode.LeftChild.Element);
+                    binarySearchTreeQueue.Enqueue(currentNode.LeftChild);
+                }
+                if (currentNode.RightChild != null)
+                {
+                    Console.WriteLine(currentNode.RightChild.Element);
+                    binarySearchTreeQueue.Enqueue(currentNode.RightChild);
+                }
+            }
+        }
+
+        public bool Search(T element)
+        {
+            BinarySearchTreeLinkedListNode<T> currentNode = _root;
+            while (currentNode != null)
+            {
+                if (element.CompareTo(currentNode.Element) < 0)
+                {
+                    currentNode = currentNode.LeftChild;
+                }
+                else if (element.CompareTo(currentNode.Element) > 0)
+                {
+                    currentNode = currentNode.RightChild;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void DeleteLeafNode(T element)
+        {
+            BinarySearchTreeLinkedListNode<T> currentNode = _root;
+            BinarySearchTreeLinkedListNode<T> parentNode = null;
+
+            while (currentNode != null)
+            {
+
+                if (element.CompareTo(currentNode.Element) < 0)
+                {
+                    parentNode = currentNode;
+                    currentNode = currentNode.LeftChild;
+                }
+                else if (element.CompareTo(currentNode.Element) > 0)
+                {
+                    parentNode = currentNode;
+                    currentNode = currentNode.RightChild;
+                }
+                else
+                {
+                    break;
+                }
+
+            }
+            if (currentNode.LeftChild != null || currentNode.RightChild != null)
+            {
+                Console.WriteLine("This Is Not Leaf Node");
+            }
+            else
+            {
+                if (parentNode.Element.CompareTo(currentNode.Element) < 0)
+                {
+                    parentNode.RightChild = null;
+                }
+                else if (parentNode.Element.CompareTo(currentNode.Element) > 0)
+                {
+                    parentNode.LeftChild = null;
+                }
+                _size--;
+            }
+        }
+
+        public void DeleteNodeWithOneSubTree(T element)
+        {
+            BinarySearchTreeLinkedListNode<T> currentNode = _root;
+            BinarySearchTreeLinkedListNode<T> parentNode = null;
+
+            while (currentNode != null)
+            {
+
+                if (element.CompareTo(currentNode.Element) < 0)
+                {
+                    parentNode = currentNode;
+                    currentNode = currentNode.LeftChild;
+                }
+                else if (element.CompareTo(currentNode.Element) > 0)
+                {
+                    parentNode = currentNode;
+                    currentNode = currentNode.RightChild;
+                }
+                else
+                {
+                    break;
+                }
+
+            }
+            if (currentNode.LeftChild != null && currentNode.RightChild != null)
+            {
+                Console.WriteLine("This method is for deleting node with one subtree!");
+                return;
+            }
+            else if (currentNode.RightChild != null)
+            {
+                currentNode = currentNode.RightChild;
+            }
+            else
+            {
+                currentNode = currentNode.LeftChild;
+            }
+
+            if (parentNode.Element.CompareTo(currentNode.Element) < 0)
+            {
+                parentNode.RightChild = currentNode;
+            }
+            else if (parentNode.Element.CompareTo(currentNode.Element) > 0)
+            {
+                parentNode.LeftChild = currentNode;
+            }
+            _size--;
+
+        }
     }
 }
 
