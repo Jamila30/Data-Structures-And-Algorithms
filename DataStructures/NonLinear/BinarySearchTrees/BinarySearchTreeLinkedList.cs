@@ -177,7 +177,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
             while (binarySearchTreeQueue.Any())
             {
                 currentNode = binarySearchTreeQueue.Dequeue();
-                if(currentNode.LeftChild != null)
+                if (currentNode.LeftChild != null)
                 {
                     Console.WriteLine(currentNode.LeftChild.Element);
                     binarySearchTreeQueue.Enqueue(currentNode.LeftChild);
@@ -190,7 +190,28 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
             }
         }
 
-      
+        public bool Search(T element)
+        {
+            BinarySearchTreeLinkedListNode<T> currentNode = _root;
+            while (currentNode != null)
+            {
+                if (element.CompareTo(currentNode.Element) < 0)
+                {
+                    currentNode = currentNode.LeftChild;
+                }
+                else if (element.CompareTo(currentNode.Element) > 0)
+                {
+                    currentNode = currentNode.RightChild;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+       
     }
 }
 

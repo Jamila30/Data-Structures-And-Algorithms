@@ -321,6 +321,7 @@ binarySearchTreeLinkedList.IterativeInsert(90);
 //binarySearchTreeLinkedList.PostOrderBinarySearchTree(binarySearchTreeLinkedList._root);
 //binarySearchTreeLinkedList.InOrderBinarySearchTree(binarySearchTreeLinkedList._root);
 //binarySearchTreeLinkedList.LevelOrderBinarySearchTree();
+//Console.WriteLine(binarySearchTreeLinkedList.Search(110)); 
 
 //binarySearchTreeLinkedList.RecursiveInsert2(50,binarySearchTreeLinkedList._root);
 //binarySearchTreeLinkedList.RecursiveInsert2(30, binarySearchTreeLinkedList._root);
