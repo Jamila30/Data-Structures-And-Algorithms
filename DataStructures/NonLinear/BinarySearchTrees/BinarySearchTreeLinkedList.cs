@@ -1,5 +1,6 @@
 ﻿using DataStructuresAndAlgorithms.DataStructures.Linear.Queues.LinkedListBaseQueue;
 using System.Collections;
+using System.Security;
 using System.Xml.Linq;
 
 namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
@@ -161,7 +162,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
             if (node != null)
             {
                 InOrderBinarySearchTree(node?.LeftChild);
-                Console.WriteLine(node.Element);
+                Console.Write(node.Element + "\t");
                 InOrderBinarySearchTree(node.RightChild);
 
             }
@@ -301,6 +302,152 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees
             }
             _size--;
 
+        }
+
+        /* 
+         * Its in-order predecessor (the maximum node in the left subtree), or 
+         * Its in-order successor (the minimum node in the right subtree).
+          */
+        public void DeleteNodeWithBothSubTree(T element)
+        {
+            BinarySearchTreeLinkedListNode<T> currentNode = _root;
+            BinarySearchTreeLinkedListNode<T> parentNode = null;
+
+            while (currentNode != null && element.CompareTo(currentNode.Element) != 0)
+            {
+
+                parentNode = currentNode;
+                if (element.CompareTo(currentNode.Element) < 0)
+                {
+                    currentNode = currentNode.LeftChild;
+                }
+                else if (element.CompareTo(currentNode.Element) > 0)
+                {
+                    currentNode = currentNode.RightChild;
+                }
+
+            }
+
+            if (currentNode == null)
+                return; // Element tapılmadı
+            //Her hansi bir node gotururem meselen right node
+            BinarySearchTreeLinkedListNode<T> minRigthLeafNode = currentNode.RightChild;
+            BinarySearchTreeLinkedListNode<T> minRigthLeafNodeParent = null;
+
+            while (minRigthLeafNode != null && minRigthLeafNode.LeftChild != null)
+            {
+
+                minRigthLeafNodeParent = minRigthLeafNode;
+                minRigthLeafNode = minRigthLeafNode.LeftChild;
+            }
+
+            minRigthLeafNodeParent.LeftChild = null;
+            currentNode.Element = minRigthLeafNode.Element;
+
+            _size--;
+
+        }
+
+        public bool Delete(T element)
+        {
+            BinarySearchTreeLinkedListNode<T> currentNode = _root;
+            BinarySearchTreeLinkedListNode<T> parentNode = null;
+
+            while (currentNode != null && element.CompareTo(currentNode.Element) != 0)
+            {
+
+                parentNode = currentNode;
+                if (element.CompareTo(currentNode.Element) < 0)
+                {
+                    currentNode = currentNode.LeftChild;
+                }
+                else if (element.CompareTo(currentNode.Element) > 0)
+                {
+                    currentNode = currentNode.RightChild;
+                }
+
+            }
+
+            if (currentNode == null)
+                return false; // Element tapılmadı
+
+            if (currentNode.LeftChild != null && currentNode.RightChild != null)
+            {
+                BinarySearchTreeLinkedListNode<T> leftSideNode = currentNode.LeftChild;
+                BinarySearchTreeLinkedListNode<T> currentNodeCopy = currentNode;
+                while (leftSideNode.RightChild != null)
+                {
+                    currentNodeCopy = leftSideNode;
+                    leftSideNode = leftSideNode.RightChild;
+                }
+                currentNode.Element = leftSideNode.Element;
+                currentNode = leftSideNode;
+                parentNode = currentNodeCopy;
+            }
+
+            BinarySearchTreeLinkedListNode<T> c = null;
+            if (currentNode.LeftChild != null)
+            {
+                c = currentNode.LeftChild;
+            }
+            else
+            {
+                c = currentNode.RightChild;
+            }
+
+            if (currentNode == _root)
+            {
+                _root = null;
+            }
+            else
+            {
+                if (currentNode == parentNode.LeftChild)
+                {
+                    parentNode.LeftChild = c;
+                }
+                else
+                {
+                    parentNode.RightChild = c;
+                }
+            }
+
+            _size--;
+            return true;
+
+        }
+
+        public int GetCountOfNumberInBinarySearchTree(BinarySearchTreeLinkedListNode<T> currentNode)
+        {
+            if (currentNode != null)
+            {
+                int leftCount = GetCountOfNumberInBinarySearchTree(currentNode.LeftChild);
+                int rightCount = GetCountOfNumberInBinarySearchTree(currentNode.RightChild);
+                return leftCount + rightCount + 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public int GetHeightOfBinarysearchTree(BinarySearchTreeLinkedListNode<T> currentNode)
+        {
+            if (currentNode != null)
+            {
+                int heightLeft = GetCountOfNumberInBinarySearchTree(currentNode.LeftChild); 
+                int heightRight = GetCountOfNumberInBinarySearchTree(currentNode.LeftChild);
+                if (heightLeft > heightRight) {
+                    return heightLeft+1;
+                }
+                else
+                {
+                    return heightRight+1;
+                }
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
