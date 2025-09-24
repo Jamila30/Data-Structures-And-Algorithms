@@ -18,6 +18,17 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.Heaps
         public bool IsEmpty() { return _size == 0; }
         public int Length { get { return _size; } }
 
+        public T Max()
+        {
+            if(IsEmpty())
+            {
+                throw new Exception("Heap Array is empty");             
+            }
+            else
+            {
+                return _HeapDatas[1];
+            }
+        }
         public void InsertHeapData(T item)
         {
             if (_size == _maxCapacity)
@@ -37,7 +48,7 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.Heaps
             _HeapDatas[heapIndex] = item;
 
         }
-        public void DeleteMax()
+        public T DeleteMax()
         {
             if (IsEmpty())
             {
@@ -70,19 +81,27 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.Heaps
                 }
             }
 
-        }
-        public T Max()
-        {
-            if(IsEmpty())
-            {
-                throw new Exception("Heap Array is empty");             
-            }
-            else
-            {
-                return _HeapDatas[1];
-            }
+            return element;
+
         }
 
+        public T[] HeapSort(T[] array)
+        {
+            
+            for (int i = 0; i < array.Length; i++)
+            {
+                this.InsertHeapData(array[i]);
+            }
+            int k = array.Length - 1;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[k] = this.DeleteMax();
+                k--;
+            }
+
+            return array;
+        }
         public IEnumerator GetEnumerator()
         {
             return GetEnumerator();

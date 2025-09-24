@@ -376,15 +376,20 @@ Console.WriteLine("Start");
 
 #region Heap
 
-CustomHeap<int> customHeap = new CustomHeap<int>();
-customHeap.InsertHeapData(25);
-customHeap.InsertHeapData(14);
-customHeap.InsertHeapData(2);
-customHeap.InsertHeapData(20);
-customHeap.InsertHeapData(10);
+//CustomHeap<int> customHeap = new CustomHeap<int>();
+//customHeap.InsertHeapData(25);
+//customHeap.InsertHeapData(14);
+//customHeap.InsertHeapData(2);
+//customHeap.InsertHeapData(20);
+//customHeap.InsertHeapData(10);
 
-Console.WriteLine(customHeap.Max());
-Console.WriteLine(string.Join(" " ,customHeap.Select(r=>r)));
+//Console.WriteLine(customHeap.Max());
+
+
+//Console.WriteLine(string.Join(" " ,customHeap.Select(r=>r)));
+//int[] sortedArray=customHeap.HeapSort(new int[] {63,250,835,947,651,28});
+//Console.WriteLine(  );
+
 #endregion
 
 #endregion
