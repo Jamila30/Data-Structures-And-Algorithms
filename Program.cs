@@ -1,4 +1,5 @@
 ﻿using DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees;
+using DataStructuresAndAlgorithms.DataStructures.NonLinear.Hashes;
 using DataStructuresAndAlgorithms.DataStructures.NonLinear.Heaps;
 
 Console.WriteLine("Start");
@@ -392,6 +393,18 @@ Console.WriteLine("Start");
 
 #endregion
 
+
+#region Hash
+CustomHash<int> customHash = new CustomHash<int>();
+customHash.InsertHashChain(28);
+customHash.InsertHashChain(15);
+customHash.InsertHashChain(47);
+customHash.InsertHashChain(11);
+customHash.InsertHashChain(78);
+
+Console.WriteLine("Elementler", customHash);
+Console.WriteLine(customHash.Search(11));
+#endregion
 #endregion
 
 #endregion
