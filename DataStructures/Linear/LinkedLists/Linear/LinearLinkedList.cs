@@ -89,16 +89,14 @@ namespace DataStructuresAndAlgorithms.DataStructures.Linear.LinkedLists.Linear
         public int Search(T searchKey)
         {
             LinearLinkedListNode<T> searchNode= _headNode;
-            int i=1;
             int index =0;
-            while (i < _size - 1)
+            while (searchNode!=null)
             {
                 if (searchNode.Element.Equals(searchKey))
                 {
                     return index;
                 }
                 searchNode= searchNode.Next; 
-                i++;
                 index++;
             }
             return -1;
