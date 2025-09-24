@@ -1,4 +1,5 @@
 ﻿using DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees;
+using DataStructuresAndAlgorithms.DataStructures.NonLinear.Heaps;
 
 Console.WriteLine("Start");
 
@@ -370,6 +371,20 @@ Console.WriteLine("Start");
 //int height=binarySearchTreeLinkedList.GetHeightOfBinarysearchTree(binarySearchTreeLinkedList._root);
 //Console.WriteLine(height-1);//0dan baslayir deye
 //Console.WriteLine("Correct -done");
+#endregion
+
+
+#region Heap
+
+CustomHeap<int> customHeap = new CustomHeap<int>();
+customHeap.InsertHeapData(25);
+customHeap.InsertHeapData(14);
+customHeap.InsertHeapData(2);
+customHeap.InsertHeapData(20);
+customHeap.InsertHeapData(10);
+
+Console.WriteLine(customHeap.Max());
+Console.WriteLine(string.Join(" " ,customHeap.Select(r=>r)));
 #endregion
 
 #endregion
