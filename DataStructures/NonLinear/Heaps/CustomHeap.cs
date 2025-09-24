@@ -2,7 +2,7 @@
 
 namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.Heaps
 {
-    public class CustomHeap<T> :IEnumerable<T>, IEnumerable where T : IComparable<T>
+    public class CustomHeap<T> :IEnumerable<T>, IEnumerable where T : struct, IComparable<T> 
     {
         private int _size;
         private int _maxCapacity;
@@ -37,7 +37,40 @@ namespace DataStructuresAndAlgorithms.DataStructures.NonLinear.Heaps
             _HeapDatas[heapIndex] = item;
 
         }
+        public void DeleteMax()
+        {
+            if (IsEmpty())
+            {
+                throw new Exception("Heap Array is empty");
+            }
 
+            T element = _HeapDatas[1];
+            _HeapDatas[1] = _HeapDatas[_size];
+            _HeapDatas[_size] = (T)(object) 0;
+            _size--;
+            int i = 1; int j = i * 2;
+
+            while (j <= _size)
+            {
+                if (_HeapDatas[j].CompareTo(_HeapDatas[j+1]) < 0)
+                {
+                    j=j+1;
+                }
+                else if (_HeapDatas[i].CompareTo(_HeapDatas[j]) < 0)
+                {
+                    T temp = _HeapDatas[i];
+                    _HeapDatas[i] = _HeapDatas[j];
+                    _HeapDatas[j] = temp;
+                    i=j; 
+                    j=i * 2;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+        }
         public T Max()
         {
             if(IsEmpty())
