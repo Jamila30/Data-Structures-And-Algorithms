@@ -2,10 +2,11 @@
 using System.Xml.Linq;
 using System.Collections;
 using System;
+using System.Drawing;
 
 namespace DataStructuresAndAlgorithms.DataStructures.Linear.LinkedLists.Linear
 {
-    public class LinearLinkedList<T> : IEnumerable<T>, IEnumerable
+    public class LinearLinkedList<T>  : IEnumerable<T>, IEnumerable where T : IComparable<T>
     {
         private int _size;
 
@@ -112,10 +113,29 @@ namespace DataStructuresAndAlgorithms.DataStructures.Linear.LinkedLists.Linear
             }
             else
             {
-                LinearLinkedListNode<T> current= _headNode;
+                LinearLinkedListNode<T> p= _headNode;
+                LinearLinkedListNode<T> q= _headNode;
 
+                while (p != null && p.Element.CompareTo(value)<0)
+                {
+                    q = p;
+                    p = p.Next;
+                }
+                if (p == _headNode)
+                {
+                    newNode.Next = _headNode;
+                    _headNode = newNode;
+                }
+                else
+                {
+                    newNode.Next = q.Next;
+                    q.Next = newNode;
+                }
             }
+            _size++;
         }
+
+        
 
         public void RemoveLast()
         {
