@@ -1,4 +1,7 @@
-﻿using DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees;
+﻿using DataStructuresAndAlgorithms.DataStructures.Linear.LinkedLists.Linear;
+using DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees;
+using DataStructuresAndAlgorithms.DataStructures.NonLinear.Hashes;
+using DataStructuresAndAlgorithms.DataStructures.NonLinear.Heaps;
 
 Console.WriteLine("Start");
 
@@ -131,7 +134,7 @@ Console.WriteLine("Start");
 //nodeList.RemoveAny(1);
 //Console.WriteLine(string.Join(" ", nodeList.Select(r => r)));
 
-//Console.WriteLine(nodeList.Search("Test1"));
+//Console.WriteLine(nodeList.Search("Test"));
 //Console.WriteLine(nodeList.Search("Test111"));
 
 #endregion
@@ -372,6 +375,53 @@ Console.WriteLine("Start");
 //Console.WriteLine("Correct -done");
 #endregion
 
+
+#region Heap
+
+//CustomHeap<int> customHeap = new CustomHeap<int>();
+//customHeap.InsertHeapData(25);
+//customHeap.InsertHeapData(14);
+//customHeap.InsertHeapData(2);
+//customHeap.InsertHeapData(20);
+//customHeap.InsertHeapData(10);
+
+//Console.WriteLine(customHeap.Max());
+
+
+//Console.WriteLine(string.Join(" " ,customHeap.Select(r=>r)));
+//int[] sortedArray=customHeap.HeapSort(new int[] {63,250,835,947,651,28});
+//Console.WriteLine(  );
+
+#endregion
+
+
+#region Hash
+//CustomHash customHash = new CustomHash();
+
+//customHash.InsertHashChain(28);
+//customHash.InsertHashChain(15);
+//customHash.InsertHashChain(47);
+//customHash.InsertHashChain(11);
+//customHash.InsertHashChain(78);
+
+//Console.WriteLine("Elementler", customHash);
+//Console.WriteLine(customHash.SearchForChain(233));
+//Console.WriteLine(customHash.SearchForChain(11));
+
+//customHash.InsertHashLinearProbing(28);
+//customHash.InsertHashLinearProbing(15);
+//customHash.InsertHashLinearProbing(47);
+//customHash.InsertHashLinearProbing(11);
+//customHash.InsertHashLinearProbing(21);
+//customHash.InsertHashLinearProbing(41);
+//customHash.InsertHashLinearProbing(51);
+//customHash.InsertHashLinearProbing(61);
+//customHash.InsertHashLinearProbing(78);
+
+//Console.WriteLine("Elementler", customHash);
+//Console.WriteLine(customHash.SearchForChain(11));
+
+#endregion
 #endregion
 
 #endregion

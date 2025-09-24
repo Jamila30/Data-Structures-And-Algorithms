@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DataStructuresAndAlgorithms.DataStructures.Linear.LinkedLists.Linear
 {
-    public class LinearLinkedListNode<T>
+    public class LinearLinkedListNode<T> where T : IComparable<T>
     {
         internal T? Element;
         internal  LinearLinkedListNode<T>? Next { get; set; }
