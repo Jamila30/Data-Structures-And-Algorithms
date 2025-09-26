@@ -1,5 +1,6 @@
 ﻿using DataStructuresAndAlgorithms.DataStructures.Linear.LinkedLists.Linear;
 using DataStructuresAndAlgorithms.DataStructures.NonLinear.BinarySearchTrees;
+using DataStructuresAndAlgorithms.DataStructures.NonLinear.Graphs;
 using DataStructuresAndAlgorithms.DataStructures.NonLinear.Hashes;
 using DataStructuresAndAlgorithms.DataStructures.NonLinear.Heaps;
 
@@ -422,6 +423,83 @@ Console.WriteLine("Start");
 //Console.WriteLine(customHash.SearchForChain(11));
 
 #endregion
+
+#region Graphs
+
+//Graph graph = new Graph(4);
+
+#region Edge list codes
+
+
+
+//List<(int, int)> edgeList = new List<(int, int)>
+//{
+//    (0, 1),
+//    (0, 2),
+//    (1, 2),
+//    (2, 3)
+//};
+
+//Console.WriteLine("Edge List:");
+//foreach (var edge in edgeList)
+//{
+//    Console.WriteLine($"{edge.Item1} - {edge.Item2}");
+//}
+
+#endregion
+
+
+#region Adjacency List
+
+
+//graph.AddEdgeForAdjacencyList(1, 2);
+
+#endregion
+
+#region Adjacency matrix
+
+
+//Console.WriteLine("Empty Adjaency Matrix :");
+//graph.Display();
+//Console.WriteLine("--Undirected unweighted graph---");
+//graph.InsertEdge(0, 1, 1);
+//graph.InsertEdge(0, 2, 1);
+//graph.InsertEdge(1, 0, 1);
+//graph.InsertEdge(1, 2, 1);
+//graph.InsertEdge(2, 0, 1);
+//graph.InsertEdge(2, 1, 1);
+//graph.InsertEdge(2, 3, 1);
+//graph.InsertEdge(3, 2, 1);
+//graph.Display();
+
+//Console.WriteLine("--Directed weighted graph---");
+//graph.InsertEdge(0, 1, 2);
+//graph.InsertEdge(0, 2, 5);
+//graph.InsertEdge(1, 2, 29);
+//graph.InsertEdge(2, 3, 32);
+//graph.Display();
+//Console.WriteLine("-----------------------------");
+//Console.WriteLine("vertex count : " + graph.VertexCount());
+//Console.WriteLine("edge count : " + graph.EdgeCount());
+//Console.WriteLine("outdegree(0) count : " + graph.OutDegreeCount(0));
+//Console.WriteLine("outdegree(3) count : " + graph.OutDegreeCount(3));
+//Console.WriteLine("indegree(2) count : " + graph.InDegreeCount(2));
+//Console.WriteLine("indegree(0) count : " + graph.InDegreeCount(0));
+//Console.WriteLine("exist edge between 0 and 2 : " + graph.ExistEdge(0, 2));
+//Console.WriteLine("exist edge between 1 and 3 : " + graph.ExistEdge(1, 3));
+//Console.WriteLine("Edges: ");
+//graph.Edges();
+
+//graph.RemoveEdge(2, 3);
+//Console.WriteLine("Edges after remove (2,3) edge: ");
+//graph.Edges();
+
+
+#endregion
+
+
+#endregion
+
 #endregion
 
 #endregion
