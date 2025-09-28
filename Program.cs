@@ -494,6 +494,29 @@ Console.WriteLine("Start");
 //Console.WriteLine("Edges after remove (2,3) edge: ");
 //graph.Edges();
 
+//Graph g = new Graph(7);
+//g.InsertEdge(0, 1, 1);
+//g.InsertEdge(0, 5, 1);
+//g.InsertEdge(0, 6, 1);
+//g.InsertEdge(1, 0, 1);
+//g.InsertEdge(1, 2, 1);
+//g.InsertEdge(1, 5, 1);
+//g.InsertEdge(1, 6, 1);
+//g.InsertEdge(2, 3, 1);
+//g.InsertEdge(2, 4, 1);
+//g.InsertEdge(2, 6, 1);
+//g.InsertEdge(3, 4, 1);
+//g.InsertEdge(4, 2, 1);
+//g.InsertEdge(4, 5, 1);
+//g.InsertEdge(5, 2, 1);
+//g.InsertEdge(5, 3, 1);
+//g.InsertEdge(6, 3, 1);
+//Console.WriteLine("Breadth First Search:");
+//g.BreadthFirstSearch(0);
+//Console.WriteLine("------------");
+//Console.WriteLine("Depth First Search:");
+//g.DepthFirstSearch(0);
+//Console.ReadKey();
 
 #endregion
 
